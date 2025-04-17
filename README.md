@@ -25,7 +25,7 @@ This section details the step-by-step process of setting up a "corporate" networ
    - Change allocation to Static and save.
 5. **Disable Windows Firewall on DC-1**:
    - RDP into DC-1.
-   - Run `wf.msc` and turn firewall off in properties.
+   - Run `wf.msc` and turn the firewall off in properties.
 6. **Set Client VM DNS to DC-1's private IP**:
    - Go to `Client VM > Network Settings > DNS servers`.
    - Set to Custom and enter DC-1’s IP.
@@ -41,7 +41,7 @@ This section details the step-by-step process of setting up a "corporate" networ
 1. RDP into DC-1.
 2. Open **Server Manager** > Add roles and features.
 3. Select **Active Directory Domain Services** and click **Add Features**.
-4. Accept restart if prompted and install.
+4. Accept the restart if prompted and install.
 5. Promote the server to a domain controller:
    - Create a **new forest**, name it, and set a **DSRM password**.
    - Complete installation and let the server reboot.
@@ -66,7 +66,7 @@ This section details the step-by-step process of setting up a "corporate" networ
 3. Click **Change**, select **Domain**, enter domain name.
 4. Use credentials for a domain user (`jane_admin`) to join.
 5. After reboot, verify domain join on DC-1 in **Active Directory Users and Computers**.
-6. Create a new OU `clients` and move Client VM into it.
+6. Create a new OU `clients` and move the Client-VM into it.
 
 ---
 
@@ -104,5 +104,3 @@ This section details the step-by-step process of setting up a "corporate" networ
    - Go to user > Properties > Account > Unlock account.
 
 ---
-
-✅ **Lab Complete**: You now have a fully functional Active Directory environment with security policies and user access controls configured.
